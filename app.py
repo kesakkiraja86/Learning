@@ -29,8 +29,8 @@ fig = px.bar(
 fig.update_traces(texttemplate="%{y:,.0f}", textposition="outside")
 fig.update_yaxes(title="Sales ($)")
 
-st.plotly_chart(fig, width="stretch")
+st.plotly_chart(fig, use_container_width=True)
 
 # --- Data table ------------------------------------------------------------
 st.subheader("Data")
-st.dataframe(df, width="stretch", hide_index=True)
+st.dataframe(df, use_container_width=True, hide_index=True)
